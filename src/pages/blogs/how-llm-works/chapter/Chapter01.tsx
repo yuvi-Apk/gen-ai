@@ -8,7 +8,7 @@ import Section from "@/components/ui/Section";
 import SubHeading from "@/components/ui/SubHeading";
 import { FileText, Code2, Layers, TrendingUp, Bot, Brain } from "lucide-react";
 
-const HowLlmWorks = () => {
+const Chapter01 = () => {
   return (
     <>
       {/* Hero */}
@@ -405,23 +405,30 @@ const HowLlmWorks = () => {
       {/* Why It Matters */}
 
       <Section>
-        <SubHeading>Why This Difference Matters</SubHeading>
+        <SubHeading>Why We Started Here</SubHeading>
 
         <Paragraph>
-          Throughout this book, our focus will be on GPT itself rather than the
-          surrounding application.
+          Now that you understand the difference between GPT and ChatGPT, we can
+          focus on the part that actually makes all the magic possible—the GPT
+          model itself.
+          <br />
+          <br />
+          Throughout the rest of this guide, we'll temporarily ignore the chat
+          interface, web search, memory, image generation, and other application
+          features.
         </Paragraph>
 
-        <InfoBox title="We'll Learn">
-          <ul className="list-disc space-y-2 pl-6">
-            <li>How text becomes numbers</li>
-            <li>How embeddings are created</li>
-            <li>Why positional encoding is required</li>
-            <li>How transformers understand context</li>
-            <li>How the model predicts the next token</li>
-            <li>How training teaches the model</li>
-          </ul>
-        </InfoBox>
+        <Quote>
+          Instead, we'll open the GPT model like engineers and understand what
+          happens inside when you send a simple message.
+        </Quote>
+
+        <Paragraph>
+          By the end, you'll know exactly how a sentence travels through the
+          model, how it is transformed into numbers, how those numbers become
+          meaningful representations, and how GPT generates a response one token
+          at a time.
+        </Paragraph>
       </Section>
 
       <Divider />
@@ -429,29 +436,39 @@ const HowLlmWorks = () => {
       {/* Journey */}
 
       <Section>
-        <SubHeading>The Journey Ahead</SubHeading>
+        <SubHeading>Where Our Journey Begins</SubHeading>
 
         <Paragraph>
-          By the end of this book, you won't just know how to use ChatGPT.
-          You'll understand how a single sentence travels through every stage of
-          the model—from tokenization to prediction.
+          Imagine you open ChatGPT and type just one sentence:
         </Paragraph>
 
         <Quote>"Hey, what's up?"</Quote>
 
         <Paragraph>
-          You'll follow this sentence as it becomes tokens, transforms into
-          vectors, passes through multiple transformer layers, and finally
-          emerges as a meaningful response—one token at a time.
+          To you, it's just four simple words.
+          <br />
+          To GPT, it's the beginning of a fascinating journey.
         </Paragraph>
 
-        <InfoBox title="Our Goal">
-          Build GPT from first principles by understanding every engineering
-          decision behind modern Large Language Models.
+        <Paragraph>
+          Before the model can understand your message, it must first convert it
+          into something a computer can process. It cannot read English
+          directly—it only understands numbers. So our next chapter begins with
+          a simple but important question:
+        </Paragraph>
+
+        <Quote>
+          How does a sentence like "Hey, what's up?" become something that GPT
+          can understand?
+        </Quote>
+
+        <InfoBox title="Note">
+          That single question leads us to the first building block of every
+          Large Language Model: Tokenization.
         </InfoBox>
       </Section>
     </>
   );
 };
 
-export default HowLlmWorks;
+export default Chapter01;
