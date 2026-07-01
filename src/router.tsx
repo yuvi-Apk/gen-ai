@@ -5,11 +5,11 @@ import HowLlmWorks from "./pages/blogs/HowLlmWorks";
 
 const router = createBrowserRouter([
   {
-    path: "/blogs",
+    path: "/",
     element: <BlogPageLayout />,
     children: [
       {
-        path: "how-llm-works",
+        index: true,
         element: <HowLlmWorks />,
       },
     ],
